@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PickUpCollectibles : MonoBehaviour
 {
 
     public Camera playerCam;
+    public Text text;
 
     private RaycastHit hit;
+    private int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,29 +25,21 @@ public class PickUpCollectibles : MonoBehaviour
         Debug.DrawRay(transform.position, playerCam.ScreenPointToRay(Input.mousePosition).direction * 100, Color.green);
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Clicked");
             Ray ray = playerCam.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out hit);
             GameObject other = hit.collider.transform.root.gameObject;
             Debug.Log(other);
             if (other.layer == LayerMask.NameToLayer("Collectible"))
             {
+                score_up(other);
                 Destroy(other);
-                Debug.Log("Destroyed");
             }
         }
     }
 
-    void OnMouseDown()
+    void score_up(GameObject other)
     {
-        Debug.Log("Clicked");
-        Ray ray = playerCam.ScreenPointToRay(Input.mousePosition);
-        Physics.Raycast(ray, out hit);
-        GameObject other = hit.collider.gameObject;
-        if (other.layer == LayerMask.NameToLayer("Collectible"))
-        {
-            Destroy(other);
-            Debug.Log("Destroyed");
-        }
+        score += 1;
+        text.text = "Score = " + score;
     }
 }

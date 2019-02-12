@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Small_Trash
   layers:
   - Default
   - TransparentFX
