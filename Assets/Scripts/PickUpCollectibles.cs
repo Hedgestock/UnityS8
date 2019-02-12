@@ -8,8 +8,8 @@ public class PickUpCollectibles : MonoBehaviour
 {
 
     public Camera playerCam;
-    public Text text;
-    public Slider slider;
+    public Text scoreText;
+    public Slider carSlider;
 
     private RaycastHit hit;
     private int score = 0;
@@ -41,12 +41,13 @@ public class PickUpCollectibles : MonoBehaviour
 
     void score_up(GameObject other)
     {
-        score += 1;
-        text.text = "Score = " + score;
+        score += ((Trash) other.GetComponent(typeof(Trash))).Value;
+        Debug.Log(((Trash)other.GetComponent(typeof(Trash))).Value);
+        scoreText.text = "Score = " + score;
         Debug.Log(other.tag);
         if (other.tag == "Car_Trash")
         {
-            slider.value++;
+            carSlider.value++;
         }
     }
 }
