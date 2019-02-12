@@ -9,9 +9,11 @@ public class PickUpCollectibles : MonoBehaviour
 
     public Camera playerCam;
     public Text text;
+    public Slider slider;
 
     private RaycastHit hit;
     private int score = 0;
+    private int carScore = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -41,5 +43,10 @@ public class PickUpCollectibles : MonoBehaviour
     {
         score += 1;
         text.text = "Score = " + score;
+        Debug.Log(other.tag);
+        if (other.tag == "Car_Trash")
+        {
+            slider.value++;
+        }
     }
 }

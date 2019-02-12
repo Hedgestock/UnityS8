@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Small_Trash
+  - Car_Trash
   layers:
   - Default
   - TransparentFX
