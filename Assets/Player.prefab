@@ -389,8 +389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 8627463300994689821}
-  scoreText: {fileID: 0}
-  carSlider: {fileID: 0}
+  scoreText: {fileID: 4450936575216210954}
+  carSlider: {fileID: 4274639941631078419}
 --- !u!114 &2003567863456137907
 MonoBehaviour:
   m_ObjectHideFlags: 0
