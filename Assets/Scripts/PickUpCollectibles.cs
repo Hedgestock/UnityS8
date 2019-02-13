@@ -28,13 +28,14 @@ public class PickUpCollectibles : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = playerCam.ScreenPointToRay(Input.mousePosition);
-            Physics.Raycast(ray, out hit);
-            GameObject other = hit.collider.transform.root.gameObject;
-            Debug.Log(other);
-            if (other.layer == LayerMask.NameToLayer("Collectible"))
+            if (Physics.Raycast(ray, out hit, 10))
             {
-                score_up(other);
-                Destroy(other);
+                GameObject other = hit.collider.transform.root.gameObject;
+                if (other.layer == LayerMask.NameToLayer("Collectible"))
+                {
+                    score_up(other);
+                    Destroy(other);
+                }
             }
         }
     }
@@ -42,9 +43,7 @@ public class PickUpCollectibles : MonoBehaviour
     void score_up(GameObject other)
     {
         score += ((Trash) other.GetComponent(typeof(Trash))).Value;
-        Debug.Log(((Trash)other.GetComponent(typeof(Trash))).Value);
         scoreText.text = "Score = " + score;
-        Debug.Log(other.tag);
         if (other.tag == "Car_Trash")
         {
             carSlider.value++;
