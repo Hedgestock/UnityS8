@@ -391,6 +391,7 @@ MonoBehaviour:
   playerCam: {fileID: 8627463300994689821}
   scoreText: {fileID: 4450936575216210954}
   carSlider: {fileID: 4274639941631078419}
+  solarScore: 3
 --- !u!114 &2003567863456137907
 MonoBehaviour:
   m_ObjectHideFlags: 0
