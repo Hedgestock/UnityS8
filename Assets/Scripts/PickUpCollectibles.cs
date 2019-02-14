@@ -18,7 +18,11 @@ public class PickUpCollectibles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (PlayerPrefs.GetInt("score", 1) != 1)
+        {
+            score = PlayerPrefs.GetInt("score");
+            scoreText.text = "Score = " + score;
+        }
     }
 
     // Update is called once per frame
@@ -48,5 +52,6 @@ public class PickUpCollectibles : MonoBehaviour
         {
             carSlider.value++;
         }
+        PlayerPrefs.SetInt("score", score);
     }
 }

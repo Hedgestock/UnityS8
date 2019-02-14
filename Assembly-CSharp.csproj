@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\GlobalTimer.cs" />
     <Compile Include="Assets\Scripts\GoToSecond.cs" />
     <Compile Include="Assets\Scripts\PickUpCollectibles.cs" />
+    <Compile Include="Assets\Scripts\SaveScore.cs" />
     <Compile Include="Assets\Scripts\Trash.cs" />
     <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
