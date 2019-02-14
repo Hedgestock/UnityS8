@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PickUpCollectibles : MonoBehaviour
@@ -18,7 +19,12 @@ public class PickUpCollectibles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("score", 1) != 1)
+        if (SceneManager.GetActiveScene().name == "Main")
+        {
+            score = 0;
+            scoreText.text = "Score = " + score;
+        }
+        else
         {
             score = PlayerPrefs.GetInt("score");
             scoreText.text = "Score = " + score;
