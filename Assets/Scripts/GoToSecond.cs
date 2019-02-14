@@ -9,6 +9,7 @@ public class GoToSecond : MonoBehaviour
 {
 
     public Slider carSlider;
+    public Text score;
 
     // Start is called before the first frame update
     void Start()
