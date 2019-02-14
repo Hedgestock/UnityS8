@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 7385937281641703828}
   - component: {fileID: 5821029668220247882}
   - component: {fileID: 2003567863456137907}
+  - component: {fileID: 1864826920365567928}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -406,6 +407,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2682293143734623293}
   timeLeft: 300
+--- !u!114 &1864826920365567928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673937892508908541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8970d94c89cb9d34a95fd75eca5f242a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSlider: {fileID: 4274639941631078419}
 --- !u!1 &4233194048247322011
 GameObject:
   m_ObjectHideFlags: 0

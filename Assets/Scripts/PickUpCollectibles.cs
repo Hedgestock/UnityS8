@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PickUpCollectibles : MonoBehaviour
@@ -22,6 +23,16 @@ public class PickUpCollectibles : MonoBehaviour
     {
         StartCoroutine("SolarTimer");
         Time.timeScale = 1;
+        if (SceneManager.GetActiveScene().name == "Main")
+        {
+            score = 0;
+            scoreText.text = "Score = " + score;
+        }
+        else
+        {
+            score = PlayerPrefs.GetInt("score");
+            scoreText.text = "Score = " + score;
+        }
     }
 
     // Update is called once per frame
@@ -58,6 +69,7 @@ public class PickUpCollectibles : MonoBehaviour
         {
             carSlider.value++;
         }
+        PlayerPrefs.SetInt("score", score);
     }
 
     IEnumerator SolarTimer()
