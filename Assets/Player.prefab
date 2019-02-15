@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2682293143734623293}
-  timeLeft: 300
+  timeLeft: 12
 --- !u!114 &1864826920365567928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,6 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSlider: {fileID: 4274639941631078419}
+  score: {fileID: 0}
 --- !u!1 &4233194048247322011
 GameObject:
   m_ObjectHideFlags: 0
